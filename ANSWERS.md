@@ -1,0 +1,4 @@
+## Question 2
+##explain potential problems that could arise with respect to the number of queries being executed. How might you solve it?
+##When theres a lot of queries being executed you can run into
+##the n+1 problem, where you have  one query at the top and then when you ask for each relationship, n increases by however many queries are in your table or database, adding more and more queries the bigger the database. This is an example of lazy loading, which can get really slow if there are too many queries and is not performance friendly. The data also becomes uneasy to read and follow, making it challenging to find what you are looking for and hard to make sense of or utilize. In order to solve lazy loading, you can consider Eager Loading (using with() method) which provides everything up front so you don't have as many queries, thus increasing loading time.
